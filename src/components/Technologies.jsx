@@ -11,54 +11,79 @@ import spring from "../assets/icons/spring.png";
 import next from "../assets/icons/next.svg";
 import redis from "../assets/icons/redis.png";
 import shadcn from "../assets/icons/shadcn.png";
+import { motion } from "framer-motion";
+
+const iconVarients = (duration) => ({
+  initial: { y: -10 },
+  animate: {
+    y: [10, -10],
+    transition: {
+      duration: duration,
+      ease: "linear",
+      repeat: Infinity,
+      repeatType: "reverse",
+    },
+  },
+});
 
 const Technologies = () => {
   return (
     <div className="border-b border-neutral-800 pb-24">
-      <h2 className="my-20 text-center text-4xl">Technologies</h2>
-      <div className="flex flex-wrap items-center justify-center gap-4">
-        <div className="rounded-2xl border-4 border-neutral-800 p-4">
-          <img src={js} className="rounded-md size-16" />
-        </div>
-        <div className="rounded-2xl border-4 border-neutral-800 p-4">
-          <img src={ts} className="rounded-md size-16" />
-        </div>
-        <div className="rounded-2xl border-4 border-neutral-800 p-4">
-          <img src={html} className="rounded-md size-16" />
-        </div>
-        <div className="rounded-2xl border-4 border-neutral-800 p-4">
-          <img src={tailwind} className="rounded-md size-16" />
-        </div>
-        <div className="rounded-2xl border-4 border-neutral-800 p-4">
-          <img src={react} className="rounded-md size-16" />
-        </div>
-        <div className="rounded-2xl border-4 border-neutral-800 p-4">
-          <img src={next} className="rounded-md size-16" />
-        </div>
-        <div className="rounded-2xl border-4 border-neutral-800 p-4">
-          <img src={redis} className="rounded-md size-16" />
-        </div>
-        <div className="rounded-2xl border-4 border-neutral-800 p-4">
-          <img src={shadcn} className="rounded-md size-16" />
-        </div>
-      </div>
-      <div className="flex flex-wrap pt-10 items-center justify-center gap-4">
-        <div className="rounded-2xl border-4 border-neutral-800 p-4">
-          <img src={mongo} className="rounded-md size-16" />
-        </div>
-        <div className="rounded-2xl border-4 border-neutral-800 p-4">
-          <img src={express} className="rounded-md size-16" />
-        </div>
-        <div className="rounded-2xl border-4 border-neutral-800 p-4">
-          <img src={node} className="rounded-md size-16" />
-        </div>
-        <div className="rounded-2xl border-4 border-neutral-800 p-4">
-          <img src={java} className="rounded-md size-16" />
-        </div>
-        <div className="rounded-2xl border-4 border-neutral-800 p-4">
-          <img src={spring} className="rounded-md size-16" />
-        </div>
-      </div>
+      <motion.h2
+        whileInView={{ opacity: 1, y: 0 }}
+        initial={{ opacity: 0, y: -100 }}
+        transition={{ duration: 1.5 }}
+      className="my-20 text-center text-4xl">Technologies</motion.h2>
+      <motion.div
+        whileInView={{ opacity: 1, x: 0 }}
+        initial={{ opacity: 0, x: -100 }}
+        transition={{ duration: 1.5 }}
+        className="flex flex-wrap items-center justify-center gap-4"
+      >
+        {[
+          { src: js, duration: 3.2 },
+          { src: ts, duration: 3.8 },
+          { src: html, duration: 4.2 },
+          { src: tailwind, duration: 4.6 },
+          { src: react, duration: 5 },
+          { src: next, duration: 5.4 },
+          { src: redis, duration: 5.8 },
+          { src: shadcn, duration: 6.2 },
+        ].map((icon, index) => (
+          <motion.div
+            key={index}
+            variants={iconVarients(icon.duration)}
+            initial="initial"
+            animate="animate"
+            className="rounded-2xl border-4 border-neutral-800 p-4"
+          >
+            <img src={icon.src} className="rounded-md size-16" />
+          </motion.div>
+        ))}
+      </motion.div>
+      <motion.div 
+      whileInView={{ opacity: 1, x: 0 }}
+      initial={{ opacity: 0, x: 100 }}
+      transition={{ duration: 1.5 }}
+      className="flex flex-wrap pt-10 items-center justify-center gap-4">
+        {[
+          { src: mongo, duration: 6.6 },
+          { src: express, duration: 7 },
+          { src: node, duration: 7.4 },
+          { src: java, duration: 7.8 },
+          { src: spring, duration: 8.2 },
+        ].map((icon, index) => (
+          <motion.div
+            key={index}
+            variants={iconVarients(icon.duration)}
+            initial="initial"
+            animate="animate"
+            className="rounded-2xl border-4 border-neutral-800 p-4"
+          >
+            <img src={icon.src} className="rounded-md size-16" />
+          </motion.div>
+        ))}
+      </motion.div>
     </div>
   );
 };

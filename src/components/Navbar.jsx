@@ -11,10 +11,10 @@ const Navbar = () => {
             
         </div>
         <div className="m-8 flex items-center justify-center gap-4 text-2xl">
-            <FaLinkedin/>
-            <FaGithub/>
-            <FaSquareXTwitter/>
-            <FaInstagram/>
+            <FaLinkedin onClick={() => window.open("https://www.linkedin.com/in/kuslhhh")} className="cursor-pointer"/>
+            <FaGithub onClick={() => window.open("https://github.com/kuslhhh")} className="cursor-pointer"/>
+            <FaSquareXTwitter onClick={() => window.open("https://twitter.com/")} className="cursor-pointer"/>
+            <FaInstagram onClick={() => window.open("https://www.instagram.com/kush_jadhav_/?igshid=YzAwZjE1ZTI0Zg%3D%3D")} className="cursor-pointer"/>
         </div>
     </nav>
   )
