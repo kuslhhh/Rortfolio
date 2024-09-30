@@ -43,6 +43,7 @@ export const PROJECTS = [
     description:
       "A fully functional note taking application with features like real-time collaboration, search, and file sharing.",
     technologies: ["NextJs","Convex", "TailwindCSS"],
+    link: "https://dochub-livid.vercel.app",
   },
   {
     title: "Kallet",
@@ -50,6 +51,7 @@ export const PROJECTS = [
     description:
       "Kallet is a wallet generator and manager that allows users to create and manage cryptocurrency wallets, view and manage private/public keys, and securely store and copy sensitive information.",
     technologies: ["NextJs", "TailwindCSS", "Crypto"],
+    link: "https://kallet.vercel.app",
   },
   // {
   //   title: "Portfolio Website",

@@ -1,3 +1,4 @@
+import { FiArrowUpRight } from "react-icons/fi";
 import { PROJECTS } from "../constants";
 import { motion } from "framer-motion";
 
@@ -35,7 +36,13 @@ const Projects = () => {
               transition={{ duration: 1 }}
               className="w-full max-w-xl lg:w-3/4"
             >
-              <h6 className="mb-2 font-semibold">{project.title}</h6>
+              <div
+                className="group flex items-center tracking-tighter cursor-pointer"
+                onClick={() => window.open(project.link, "_blank")}
+              > 
+                <h6 className="mb-2 font-semibold">{project.title}</h6>
+                <FiArrowUpRight className="ml-1 pb-2 size-6 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+              </div>
               <p className="mb-4 text-neutral-500">{project.description}</p>
               {project.technologies.map((tech, index) => (
                 <span
