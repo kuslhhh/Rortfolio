@@ -67,11 +67,11 @@ const Technologies = () => {
       transition={{ duration: 1.5 }}
       className="flex flex-wrap pt-10 items-center justify-center gap-4">
         {[
-          { src: mongo, duration: 6.6 },
-          { src: express, duration: 7 },
-          { src: node, duration: 7.4 },
-          { src: java, duration: 7.8 },
-          { src: spring, duration: 8.2 },
+          { src: mongo, duration: 3.2 },
+          { src: express, duration: 3.8 },
+          { src: node, duration: 4.2 },
+          { src: java, duration: 4.6 },
+          { src: spring, duration: 5.0 },
         ].map((icon, index) => (
           <motion.div
             key={index}
