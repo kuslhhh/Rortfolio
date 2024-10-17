@@ -71,6 +71,7 @@ export const PROJECTS = [
 
 export const CONTACT = {
   address: "Nashik, Maharashtra, India",
+  phoneNo: "+91-9325979433",
   email: "kushaljadhav7745@gmail.com",
   discord: "kushhh_18"
 };
