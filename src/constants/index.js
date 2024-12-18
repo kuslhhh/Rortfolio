@@ -1,5 +1,6 @@
 import project1 from "../assets/projects/project-1.jpg";
 import project2 from "../assets/projects/project-2.jpg";
+import project3 from "../assets/projects/project-3.jpg";
 
 export const HERO_CONTENT = `I am a passionate full stack developer with a knack for crafting robust and scalable web applications. I have honed my skills in front-end technologies like React and Next.js, as well as back-end technologies like Node.js, MySQL, PostgreSQL, MongoDB, Java and Spring boot. My goal is to leverage my expertise to create innovative solutions that drive business growth and deliver exceptional user experiences.`;
 
@@ -44,6 +45,14 @@ export const PROJECTS = [
       "A fully functional note taking application with features like real-time collaboration, search, and file sharing.",
     technologies: ["NextJs","Convex", "TailwindCSS"],
     link: "https://dochub-livid.vercel.app",
+  },
+  {
+    title: "Saransh",
+    image: project3,
+    description:
+      "This is an article summarizer web application powered by OpenAI's Chat GPT 4 API. Say goodbye to long hours of reading articles; let KSH do the summarizing for you!",
+    technologies: ["NextJs", "TailwindCSS", "OpenAI"],
+    link: "https://saranslh.vercel.app",
   },
   {
     title: "Kallet",
