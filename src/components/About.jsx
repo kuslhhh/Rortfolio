@@ -40,7 +40,7 @@ const About = () => {
             <p className="my-2 max-w-xl py-6">{ABOUT_TEXT}</p>
           </div>
           <a
-            href="https://drive.google.com/file/d/1T9c6W7_Td5fxsK5O_Oia5Ca3ABg7OjDY/view?usp=sharing"
+            href="https://drive.google.com/file/d/1qEsxUPHWvCjhUMsAEjONHnqx6GsaLn10/view?usp=sharing"
             className=" relative inline-flex items-center justify-center p-4 px-5 py-3 overflow-hidden font-medium text-indigo-600 transition duration-300 ease-out rounded-full shadow-xl group hover:ring-1 hover:ring-purple-500"
             target="_blank"
             rel="noopener noreferrer"
